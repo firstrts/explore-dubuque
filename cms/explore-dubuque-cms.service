@@ -1,0 +1,25 @@
+# systemd service for Payload CMS
+# Place at: /etc/systemd/system/explore-dubuque-cms.service
+# Then: sudo systemctl daemon-reload
+#       sudo systemctl enable explore-dubuque-cms
+#       sudo systemctl start explore-dubuque-cms
+
+[Unit]
+Description=Explore Dubuque CMS (Payload)
+After=network.target postgresql.service
+
+[Service]
+Type=simple
+User=claude
+WorkingDirectory=/home/claude/explore-dubuque/cms
+ExecStart=/usr/bin/node dist/server.js
+Restart=always
+RestartSec=10
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=explore-dubuque-cms
+Environment=NODE_ENV=production
+EnvironmentFile=/home/claude/explore-dubuque/cms/.env
+
+[Install]
+WantedBy=multi-user.target
