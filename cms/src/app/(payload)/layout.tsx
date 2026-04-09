@@ -6,7 +6,7 @@ import { importMap } from './admin/importMap'
 
 import type { ServerFunctionClient } from 'payload'
 
-import './custom.scss'
+import '@payloadcms/ui/styles.css'
 
 export const metadata = {
   title: 'Explore Dubuque CMS',
