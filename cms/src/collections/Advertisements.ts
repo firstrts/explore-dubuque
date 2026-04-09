@@ -1,7 +1,11 @@
-import { CollectionConfig } from 'payload/types'
+import { CollectionConfig } from 'payload'
 
 export const Advertisements: CollectionConfig = {
   slug: 'advertisements',
+
+  access: {
+    read: () => true,
+  },
   admin: {
     useAsTitle: 'name',
     group: 'Monetization',

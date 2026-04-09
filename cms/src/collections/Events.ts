@@ -1,7 +1,11 @@
-import { CollectionConfig } from 'payload/types'
+import { CollectionConfig } from 'payload'
 
 export const Events: CollectionConfig = {
   slug: 'events',
+
+  access: {
+    read: () => true,
+  },
   admin: {
     useAsTitle: 'title',
     group: 'Content',
