@@ -101,6 +101,7 @@ export type Listing = {
   tier: 'basic' | 'featured' | 'premium' | 'sponsor'
   isFeatured: boolean
   status: 'published' | 'draft' | 'archived'
+  seo?: { metaTitle?: string; metaDescription?: string }
 }
 
 export type Event = {
