@@ -2,7 +2,8 @@ import { withPayload } from '@payloadcms/next/withPayload'
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  // CMS-only Next.js app — just the admin panel
+  // Separate CMS assets from frontend assets so Nginx can route them
+  assetPrefix: '/_cms',
 }
 
 export default withPayload(nextConfig)
