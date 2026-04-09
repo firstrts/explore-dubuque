@@ -8,6 +8,7 @@ import type { ServerFunctionClient } from 'payload'
 
 import '@payloadcms/ui/styles.css'
 import '@payloadcms/ui/scss/app.scss'
+import '@payloadcms/next/css'
 
 export const metadata = {
   title: 'Explore Dubuque CMS',
